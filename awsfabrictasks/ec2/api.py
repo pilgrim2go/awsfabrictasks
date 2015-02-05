@@ -226,7 +226,7 @@ class Ec2InstanceWrapper(object):
             filename = abspath(join(expanduser(dirpath), key_name))
             if exists(filename):
                 return filename
-        raise LookupError('Could not find {key_name} in awsfab_settings.KEYPAIR_PATH: {path!r}'.format(**vars()))
+        print('Could not find {key_name} in awsfab_settings.KEYPAIR_PATH: {path!r}'.format(**vars()))
 
     def add_instance_to_env(self):
         """
